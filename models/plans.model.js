@@ -1,4 +1,8 @@
 import mongoose from 'mongoose'
+import {
+  create,
+  find
+} from './common.model'
 
 const planSchema = new mongoose.Schema({
   title: {
@@ -21,11 +25,9 @@ const planSchema = new mongoose.Schema({
 const plansModel = mongoose.model('Plans', planSchema);
 
 export const findPlans = () => {
-  return new Promise((resolve, reject) => {
-    plansModel.find((error, result) => {
-      if(error)
-        reject(error)
-      resolve(result)
-    })
-  })
+  return find(plansModel)
+}
+
+export const createNewPlan = (planDraft) => {
+  create(plansModel, planDraft)
 }

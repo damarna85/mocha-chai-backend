@@ -12,12 +12,14 @@
     "body-parser": "*",
     "config": "^1.26.1",
     "express": "*",
+    "jsonwebtoken": "^7.4.1",
     "mongoose": "*"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",

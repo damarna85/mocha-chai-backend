@@ -1,4 +1,9 @@
 import mongoose from 'mongoose'
+import {
+  create,
+  find,
+  removeAll,
+} from './common.model'
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -28,31 +33,13 @@ const userSchema = new mongoose.Schema({
 const usersModel = mongoose.model('Users', userSchema);
 
 export const findUsers = () => {
-  return new Promise((resolve, reject) => {
-    usersModel.find((error, result) => {
-      if(error)
-        reject(error)
-      resolve(result)
-    })
-  })
+  return find(usersModel)
 }
 
 export const createUser = (userDraft) => {
-  return new Promise((resolve, reject) => {
-    usersModel.create(userDraft, (error, result) => {
-      if(error)
-        reject(error)
-      resolve(result)
-    })
-  })
+  return create(usersModel, userDraft)
 }
 
 export const removeAllUsers = () => {
-  return new Promise((resolve, reject) => {
-    usersModel.remove({}, (error, result) => {
-      if(error)
-        reject(error)
-      resolve(result)
-    })
-  })
+  return removeAll(usersModel)
 }
