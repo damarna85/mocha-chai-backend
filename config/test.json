@@ -1,3 +1,4 @@
 {
-  "DBHost": "mongodb://localhost/plan-on-me-test"
+  "DBHost": "mongodb://localhost/plan-on-me-test",
+  "ACCESS_TOKEN_SECRET": "1234567890ABCDEFGHI"
 }
