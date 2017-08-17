@@ -12,6 +12,8 @@
     "body-parser": "*",
     "config": "^1.26.1",
     "express": "*",
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5",
     "jsonwebtoken": "^7.4.1",
     "mongoose": "*"
   },
